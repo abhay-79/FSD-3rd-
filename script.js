@@ -183,11 +183,32 @@
 
 
 
-    document.addressform.value;
-    function validateform(){
-        var x=document.forms.addressform.value;
-        if(x==null || x=="" ){
-            alert("First name must befill");
-            return false;
-        }
-    }
+    // document.addressform.value;
+    // function validateform(){
+    //     var x=document.forms.addressform.value;
+    //     if(x==null || x=="" ){
+    //         alert("First name must befill");
+    //         return false;
+    //     }
+    // }
+
+
+
+//     const e=new Date("2021-03-25");
+// e.getHours();
+// document.write(e.getHours());
+// const d=new Date();
+// d.getHours();
+// document.write(d.getHours());
+
+
+// const d=new Date();
+// d.getMonth();
+// document.write(d.getDate());
+// document.write(d.getMonth());
+// d.setDate(d.getDate()+50);
+// document.write(d.getDate());
+// document.write(d.getMonth());
+
+
+
