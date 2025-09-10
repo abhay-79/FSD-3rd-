@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Counter App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #630df7;
+      color: white;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: #fa1e00;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Counter App</h1>
+  <div class="circle" id="counter">0</div>
+  <div class="buttons">
+    <button onclick="decrement()">−</button>
+    <button onclick="increment()">+</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById('counter');
+
+    function updateCounter() {
+      counter.textContent = count;
+    }
+
+    function increment() {
+      if (count < 10) {
+        count++;
+        updateCounter();
+      } else {
+        alert("Maximum: 10");
+      }
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        updateCounter();
+      } else {
+        alert("Minimum: 0");
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide Image Example</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .upper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+    .lower {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-top: 2px solid #ccc;
+    }
+    img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+    }
+    button:hover {
+      background-color: #ecf00a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="upper">
+    <img id="myImage" src="https://imgs.search.brave.com/xJSR5AHEtTOw2PbOOJDiZn1FF6zgsZBX86bva9E31Sk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvNTAwcC8w/Ni80My90ZWFjaGVy/LW1hc2NvdC1sb2dv/LWRlc2lnbi12ZWN0/b3ItNDU3OTA2NDMu/anBn" alt="Sample Image">
+  </div>
+
+  <div class="lower">
+    <button onclick="hideImage()">Hide Image</button>
+  </div>
+
+  <script>
+    function hideImage() {
+      document.getElementById("myImage").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
