@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,11 +18,75 @@
         //     a++;
         // }
 
-        var a=1;
-        do{
-            document.write("Python <br>")  
-        a++;
-          }while(a<=10);
+        // var a=1;
+        // do{
+        //     document.write("Python <br>")  
+        // a++;
+        //   }while(a<=10);
+5
+
+        var num=1;
+        for(num=1;num<=10;num++){
+              
+        if(num%2==0){
+            document.write(num+" "+"Even number <br>");
+        }
+        else{
+            document.write(num+" "+"Odd number <br>");
+        }
+    }
+
     </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tables of 4 and 9</title>
+</head>
+<body>
+  <h2>Multiplication Tables of 4 and 9</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>4 Table</th>
+      <th>9 Table</th>
+    </tr>
+    <tbody id="tables"></tbody>
+  </table>
+
+  <h3>Even Numbers</h3>
+  <p id="even"></p>
+
+  <h3>Odd Numbers</h3>
+  <p id="odd"></p>
+
+  <script>
+    let tableHTML = "";
+    let evenNumbers = "";
+    let oddNumbers = "";
+
+    for (let i = 1; i <= 10; i++) {
+      let mul4 = 4 * i;
+      let mul9 = 9 * i;
+
+      tableHTML += "<tr><td>4 × " + i + " = " + mul4 + "</td><td>9 × " + i + " = " + mul9 + "</td></tr>";
+
+      if (mul4 % 2 === 0) {
+        evenNumbers += mul4 + ", ";
+      } else {
+        oddNumbers += mul4 + ", ";
+      }
+
+      if (mul9 % 2 === 0) {
+        evenNumbers += mul9 + ", ";
+      } else {
+        oddNumbers += mul9 + ", ";
+      }
+    }
+
+    document.getElementById("tables").innerHTML = tableHTML;
+    document.getElementById("even").innerText = evenNumbers.slice(0, -2);
+    document.getElementById("odd").innerText = oddNumbers.slice(0, -2);
+  </script>
 </body>
 </html>
