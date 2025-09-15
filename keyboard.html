@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Piano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .piano-key {
+            width: 100px;
+            height: 200px;
+            border-radius: 8px;
+            transition: transform 0.1s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            user-select: none;
+        }
+        .piano-key:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #key1 { background-color: #fca5a5; }
+        #key2 { background-color: #fcd34d; }
+        #key3 { background-color: #86efac; }
+        #key4 { background-color: #60a5fa; }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+        <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Simple Piano</h1>
+        <div class="flex space-x-4">
+            <div id="key1" class="piano-key flex items-center justify-center text-xl font-bold text-gray-800">A</div>
+            <div id="key2" class="piano-key flex items-center justify-center text-xl font-bold text-gray-800">S</div>
+            <div id="key3" class="piano-key flex items-center justify-center text-xl font-bold text-gray-800">D</div>
+            <div id="key4" class="piano-key flex items-center justify-center text-xl font-bold text-gray-800">F</div>
+        </div>
+    </div>
+    <script>
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(frequency, duration) {
+            const oscillator = audioContext.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.value = frequency;
+            const gainNode = audioContext.createGain();
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + duration);
+        }
+        const key1 = document.getElementById('key1');
+        const key2 = document.getElementById('key2');
+        const key3 = document.getElementById('key3');
+        const key4 = document.getElementById('key4');
+        key1.addEventListener('click', () => playSound(261.63, 0.5));
+        key2.addEventListener('click', () => playSound(293.66, 0.5));
+        key3.addEventListener('click', () => playSound(329.63, 0.5));
+        key4.addEventListener('click', () => playSound(392.00, 0.5));
+    </script>
+</body>
+</html>
