@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div class="main">
+        <div class="toDoApp">
+            <h2 class="a">To Do List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    <script>
+        const inputBox = document.getElementById("input-box");
+        const listContainer = document.getElementById("list-container");
+
+        function addTask() {
+            if (inputBox.value === '') {
+                alert("You must write something");
+            } else {
+                let li = document.createElement("li");
+                li.innerHTML = inputBox.value;
+                listContainer.appendChild(li);
+                inputBox.value = ""; 
+            }
+        }
+    </script>
+</body>
+</html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Richard Sanchez</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      background: #f4f6fb;
+      color: #333;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 30%;
+      background: #1d3557;
+      color: white;
+      padding: 20px;
+      border-radius: 10px 0 0 10px;
+    }
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar section {
+      margin-bottom: 25px;
+    }
+    .sidebar h3 {
+      margin-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      padding-bottom: 4px;
+      font-size: 16px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .sidebar ul li {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .main {
+      width: 70%;
+      background: white;
+      padding: 30px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .main h1 {
+      font-size: 28px;
+    }
+    .main h1 span {
+      color: #1d3557;
+    }
+    .main h2 {
+      margin: 15px 0 8px;
+      color: #1d3557;
+      font-size: 20px;
+    }
+    .main p {
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .experience {
+      margin-top: 20px;
+    }
+    .job {
+      margin-bottom: 15px;
+    }
+    .job h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .job small {
+      color: #777;
+    }
+    .job ul {
+      list-style: disc;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .references {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .reference {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="logo.webp" alt="Profile Picture">
+    <h2>Resume</h2>
+    <section>
+      <p>9580979566</p>
+      <p>abhay798599@gmail.com</p>
+      <p>802 tower 6</p>
+    </section>
+
+    <section>
+      <h3>Education</h3>
+      <ul>
+        <li><b>2020</b><br>high school</li>
+        <li><b>2022</b><br>Intermediate</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Skills</h3>
+      <ul>
+        <li>Project Management</li>
+        <li>Public Relations</li>
+        <li>Teamwork</li>
+        <li>Time Management</li>
+        <li>Leadership</li>
+        <li>Communication</li>
+        <li>Critical Thinking</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Languages</h3>
+      <ul>
+        <li>English (Fluent)</li>
+        <li>French (Fluent)</li>
+        <li>German (Basics)</li>
+        <li>Spanish (Intermediate)</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="main">
+    <h1>RICHARD <span>SANCHEZ</span></h1>
+    <p><b>Marketing Manager</b></p>
+
+    <h2>Profile</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+
+    <h2>Work Experience</h2>
+    <div class="experience">
+      <div class="job">
+        <h3>Borcelle Studio — Marketing Manager & Specialist</h3>
+        <small>2030 - Present</small>
+        <ul>
+          <li>Develop and execute comprehensive marketing strategies.</li>
+          <li>Lead, mentor, and manage a high-performing team.</li>
+          <li>Monitor brand consistency across channels.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Fauget Studio — Marketing Manager & Specialist</h3>
+        <small>2025 - 2029</small>
+        <ul>
+          <li>Create and manage the marketing budget efficiently.</li>
+          <li>Oversee market research and competitor strategies.</li>
+          <li>Monitor brand consistency across materials.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Studio Shodwe — Marketing Manager & Specialist</h3>
+        <small>2024 - 2025</small>
+        <ul>
+          <li>Develop and maintain strong relationships with partners.</li>
+          <li>Monitor and maintain brand consistency.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>References</h2>
+    <div class="references">
+      <div class="reference">
+        <p><b>Estelle Darcy</b><br>Wardiere Inc. / CTO<br>📞 123-456-7890<br>✉️ hello@reallygreatsite.com</p>
+      </div>
+      <div class="reference">
+        <p><b>Harper Richard</b><br>Wardiere Inc. / CEO<br>📞 123-456-7890<br>✉️ hello@reallygreatsite.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
