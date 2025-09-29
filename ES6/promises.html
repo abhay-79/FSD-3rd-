@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const mypromise=new Promise((resolve,reject)=>{
+
+         const Password="abhay@1234";
+            if(Password.length>8){
+                resolve("strong password");
+         }
+         else{
+                reject("weak password");
+         }
+        })
+        console.log(mypromise);
+        mypromise.then((msg)=>{
+            console.log(msg);
+        })
+        mypromise.catch((err)=>{
+            console.log(err);
+        })
+        .finally(()=>{
+            console.log("you are student of abes");
+        })
+    </script>
+</body>
+</html>
