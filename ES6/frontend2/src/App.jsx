@@ -1,0 +1,86 @@
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+
+// function App() {
+//   const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+//       <div>
+//         <a href="https://vite.dev" target="_blank">
+//           <img src={viteLogo} className="logo" alt="Vite logo" />
+//         </a>
+//         <a href="https://react.dev" target="_blank">
+//           <img src={reactLogo} className="logo react" alt="React logo" />
+//         </a>
+//       </div>
+//       <h1>Vite + React</h1>
+//       <div className="card">
+//         <button onClick={() => setCount((count) => count + 1)}>
+//           count is {count}
+//         </button>
+//         <p>
+//           Edit <code>src/App.jsx</code> and save to test HMR
+//         </p>
+//       </div>
+//       <p className="read-the-docs">
+//         Click on the Vite and React logos to learn more
+//       </p>
+//     </>
+//   )
+// }
+
+// export default App
+
+// import './app.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// function App(){
+//     return(
+//         <>
+//         <div>
+//             <container>
+//                 <Row>
+//                     <Col>1 of 2</Col>
+//                     <Col>2 of 2</Col>
+
+//                 </Row>
+//                 <Row>
+//                     <Col>1 of 3</Col>
+//                     <Col>2 of 3</Col>
+//                     <Col>3 of 3</Col>
+//                 </Row>
+//             </container>
+//             </div>
+//             </>
+//     )
+// }
+// export default App;
+
+
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+  const [counter, setCounter] = useState(0)
+
+  const addValue = () => {
+    if (counter < 20) setCounter(counter + 1)
+  }
+
+  const removeValue = () => {
+    if (counter > 0) setCounter(counter - 1)
+  }
+
+  return (
+    <>
+      <h1>College React</h1>
+      <h2>Counter Value: {counter}</h2>
+      <button onClick={addValue}>Add Value</button><br />
+      <button onClick={removeValue}>Remove Value</button>
+    </>
+  )
+}
+
+export default App
