@@ -84,17 +84,39 @@
 // }
 
 // export default App
+// import React from 'react'
+// import Book from "./Book";
+
+
+
+// function App() {
+//   return (
+//     <div>
+//       <Book />
+//       <Book />
+//       <Book />
+//     </div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import Book from "./Book";
-
-
-
+import Book from './Book.jsx'
+import Navbar from './navbar.jsx'
+import './App.css'
 function App() {
   return (
     <div>
-      <Book />
-      <Book />
-      <Book />
+      <Navbar/>
+      <h1>My Book Collection</h1>
+      <div id='abc'>
+        
+      <Book/>
+      <Book/>
+      <Book/>
+      <Book/>
+      </div>
     </div>
   )
 }
