@@ -101,24 +101,81 @@
 
 // export default App
 
-import React from 'react'
-import Book from './Book.jsx'
-import Navbar from './navbar.jsx'
-import './App.css'
+// import React from 'react'
+// import Book from './Book.jsx'
+// import Navbar from './navbar.jsx'
+// import './App.css'
+// function App() {
+//   return (
+//     <div>
+//       <Navbar/>
+//       <h1>My Book Collection</h1>
+//       <div id='abc'>
+        
+//       <Book/>
+//       <Book/>
+//       <Book/>
+//       <Book/>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React,{useEffect, useState} from 'react'; 
+// import Fashion from './component/fashion.jsx';
+
+// function App() {
+//   const [book,setBooks]=useState([]);
+//   useEffect(()=>{
+//     fetch('https://fakestoreapi.com/products')
+//     .then(res=>res.json())
+//     .then(data=>{
+//       setBooks(data);
+//     })
+//   },[])
+//   return (
+//     <div>
+//      {
+//       book.map((f,i)=>{
+//         <book key={i} props={f} />;
+        
+//       })
+//      }
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React, { useEffect, useState } from 'react';
+import Fashion from './component/fashion.jsx'; // ✅ Ensure correct file name & path
+
 function App() {
+  const [fa1, setFa1] = useState([]);
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then((res) => res.json())
+      .then((data) => {
+        setFa1(data);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <div>
-      <Navbar/>
-      <h1>My Book Collection</h1>
-      <div id='abc'>
-        
-      <Book/>
-      <Book/>
-      <Book/>
-      <Book/>
+      <h1>Fashion Store</h1>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        {fa1.map((f, i) => (
+          <Fashion key={i} title={f.title} price={f.price} />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
